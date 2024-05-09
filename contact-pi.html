@@ -265,12 +265,12 @@
 
         // Validate form data
         if (!name || !email || !phone || !header || !massage) {
-          alert('All fields are required.');
+          alert('จำเป็นต้องกรกทุกช่อง');
           return;
         }
 
         if (!email.includes('@')) {
-          alert('Please enter a valid email address.');
+          alert('โปรดใส่อีเมล์ที่ถูกต้อง');
           return;
         }
 
