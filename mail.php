@@ -3,7 +3,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         # FIX: Replace this email with recipient email
-        $mail_to = "USEREMAIL@gmail.com";
+        $mail_to = "visarutforthaipbs@gmail.com";
         
         # Sender Data
         $subject = trim($_POST["subject"]);
@@ -19,10 +19,11 @@
         }
         
         # Mail Content
-        $content = "Name: $name\n";
-        $content = "Topic: $subject\n";
-        $content .= "Email: $email\n\n";
-        $content .= "Message:\n$message\n";
+        $content = "ชื่อ: $name\n";
+        $content .= "อีเมล์: $email\n\n";
+        $content .= "เบอร์โทร: $phone\n";
+        $content .= "เรื่องที่ต้องการติดต่อ: $header\n";
+        $content .= "รายละเอียด:\n$message\n";
 
         # email headers.
         $headers = "From: $name <$email>";
@@ -34,7 +35,7 @@
             http_response_code(200);
             echo "Thank You! Your message has been sent.";
         } else {
-            # Set a 500 (internal server error) response code.
+            # Set a 500 (internal server error) response code. 
             http_response_code(500);
             echo "Oops! Something went wrong, we couldn't send your message.";
         }
