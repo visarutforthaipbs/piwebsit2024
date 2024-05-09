@@ -22,7 +22,7 @@
         $content = "ชื่อ: $name\n";
         $content .= "อีเมล์: $email\n\n";
         $content .= "เบอร์โทร: $phone\n";
-        $content .= "เรื่องที่ต้องการติดต่อ: $header\n";
+        $content .= "เรื่องที่ต้องการติดต่อ: $headers\n";
         $content .= "รายละเอียด:\n$message\n";
 
         # email headers.
