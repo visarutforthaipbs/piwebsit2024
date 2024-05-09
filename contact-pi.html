@@ -106,7 +106,8 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <form id="contact-form" class="contact__form " method="post" action="mail.php">
+            <form id="contact-form" class="contact__form " action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="0a983ee8-8021-4ec8-82d3-69b362f9974e">
 
               <!-- form message -->
               <div class="row">
@@ -149,6 +150,9 @@
                 <textarea name="message" id="message" class="form-control" rows="4"
                   placeholder="รายละเอียดเพิ่มเติม"></textarea>
               </div>
+
+            <!-- hCaptcha Spam Protection -->
+               <div class="h-captcha" data-captcha="true"></div>
 
             <!--รายละเอียดเพิ่มเติม-->
               <button class="btn btn-main" name="submit" type="submit">ส่งข้อความ</button>
@@ -229,7 +233,8 @@
     <!-- 
     Essential Scripts
     =====================================-->
-
+    <!-- Required for hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     
     <!-- Main jQuery -->
     <script src="plugins/jquery/jquery.js"></script>
