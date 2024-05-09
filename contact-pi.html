@@ -283,8 +283,10 @@
           massage: massage
         }).then(function(response) {
           console.log("SUCCESS!", response.status, response.text);
+          alert('เราได้รับข้อมูลแล้ว ขอบคุณสำหรับการติดต่อเรา 🙏😊');
         }, function(error) {
           console.log("FAILED...", error);
+          alert('โปรดลองอีกครั้ง');
         });
       });
     </script>
