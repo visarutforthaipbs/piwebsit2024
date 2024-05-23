@@ -1260,7 +1260,7 @@ ul.dropdown-menu li {
   padding: 40px;
   font-style: italic;
   background: #f5f6ff;
-  border-left: 5px solid #ff715b;
+  border-left: 5px solid var(--main-color);
   margin: 25px 0px;
 }
 
@@ -1654,4 +1654,15 @@ ul.dropdown-menu li {
   100% {
     transform: rotate(0deg);
   }
+}
+
+.image-container {
+  width: 100%;
+  height: 300px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
